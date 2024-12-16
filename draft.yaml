@@ -1,0 +1,19 @@
+models:
+  Supplier:
+    nama: string:400
+    alamat: string:400
+    no_hp: string:400
+    relationships:
+      hasMany: Barang
+  Barang:
+    nama: string:400
+    satuan: string:400
+    last_update: datetime
+    relationships:
+      hasMany: Supplier
+  Harga:
+    tanggal: date
+    harga_beli: integer
+    harga_jual: integer
+    relationships:
+      hasMany: Barang
